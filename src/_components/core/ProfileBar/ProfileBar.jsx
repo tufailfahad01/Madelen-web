@@ -45,7 +45,7 @@ export default function ProfileBar() {
             }}
           >
             <Image
-              src="/NumbersImage.png"
+              src="/assets/icons/NumbersImage.png"
               width={30}
               height={30}
               alt="Trophy Icon"
@@ -145,7 +145,7 @@ export default function ProfileBar() {
         >
           <Avatar
             alt="User Image"
-            src="/ProfileImage.png"
+            src="/assets/images/ProfileImage.png"
             sx={{
               width: 176,
               height: 176,
@@ -205,7 +205,7 @@ export default function ProfileBar() {
             }}
           >
             <Image
-              src="/ListTypeImage.png"
+              src="/assets/icons/ListTypeImage.png"
               width={14}
               height={14}
               alt="List Icon"
@@ -306,7 +306,7 @@ export default function ProfileBar() {
         }}
       >
         <Image
-          src="/discordImage.png"
+          src="/assets/images/discordImage.png"
           width={54}
           height={54}
           alt="Discord Icon"

@@ -1,24 +1,10 @@
 "use client";
 import Image from "next/image";
 import { Box, Typography } from "@mui/material";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import SettingsIcon from "@mui/icons-material/Settings";
-import LogoutIcon from "@mui/icons-material/Logout";
+import { navItems, bottomItems } from "@/utils/sidebarData";
 
 export default function Sidebar({ setActivePage }) {
-  const navItems = [
-    { src: "/dashboard.png", label: "Dashboard", page: "dashboard" },
-    { src: "/emporium.png", label: "Emporium", page: "emporium" },
-    { src: "/library.png", label: "Library", page: "library" },
-    { src: "/studio.png", label: "Studio", page: "studio" },
-    { src: "/coins.png", label: "Ocoin", page: "ocoin" },
-  ];
-
-  const bottomItems = [
-    { icon: <HelpOutlineIcon />, label: "Help", page: "help" },
-    { icon: <SettingsIcon />, label: "Settings", page: "settings" },
-    { icon: <LogoutIcon />, label: "Logout", page: "logout" },
-  ];
+  
 
   return (
     <Box
@@ -46,7 +32,7 @@ export default function Sidebar({ setActivePage }) {
             "&:hover": { transform: "rotate(5deg)" },
           }}
         >
-          <Image src="/logo.png" width={45} height={45} alt="Logo" priority />
+          <Image src="/assets/images/logo.png" width={45} height={45} alt="Logo" priority />
         </Box>
 
         <Box mt={1} px={5} py={2}>
