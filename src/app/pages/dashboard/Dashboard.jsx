@@ -82,7 +82,7 @@ export default function Dashboard() {
 
       <Box
         sx={{
-          backgroundImage: `url("/Emporium box.png")`,
+          backgroundImage: `url("/EmporiumBox.png")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -126,7 +126,7 @@ export default function Dashboard() {
             p: 2,
             boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
             transition: "transform 0.3s ease",
-            "&:hover": { transform: "scale(1.02)" },
+            "&:hover": { transform: "scale(1.04)" },
           }}
         >
           <Box width="300px" display="flex" gap={1} alignItems="center">

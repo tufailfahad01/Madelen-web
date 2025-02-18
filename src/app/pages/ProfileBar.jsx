@@ -157,7 +157,12 @@ export default function ProfileBar() {
           <Typography variant="h5" fontWeight={600}>
             Madelen Sam
           </Typography>
-          <EditNoteIcon sx={{ transition: "transform 0.3s ease", "&:hover": { transform: "scale(1.1)" } }} />
+          <EditNoteIcon
+            sx={{
+              transition: "transform 0.3s ease",
+              "&:hover": { transform: "scale(1.1)" },
+            }}
+          />
         </Box>
         <Typography variant="body1" color="gray">
           @raymadelen
@@ -185,9 +190,9 @@ export default function ProfileBar() {
           "Downloaded new mesh 2",
           "Downloaded new mesh 3",
           "Downloaded new mesh 4",
-        ].map((activity, idx) => (
+        ].map((activity, id) => (
           <Box
-            key={idx}
+            key={id}
             display={"flex"}
             py={0.3}
             alignItems={"center"}
@@ -224,7 +229,12 @@ export default function ProfileBar() {
         <Typography mt={1} variant="h5" fontWeight={600}>
           Statistics
         </Typography>
-        <Box sx={{ transition: "transform 0.3s ease", "&:hover": { transform: "scale(1.02)" } }}>
+        <Box
+          sx={{
+            transition: "transform 0.3s ease",
+            "&:hover": { transform: "scale(1.02)" },
+          }}
+        >
           <Typography variant="h6" fontWeight={600}>
             234
           </Typography>
@@ -240,7 +250,12 @@ export default function ProfileBar() {
             borderColor: "gray",
           }}
         />
-        <Box sx={{ transition: "transform 0.3s ease", "&:hover": { transform: "scale(1.02)" } }}>
+        <Box
+          sx={{
+            transition: "transform 0.3s ease",
+            "&:hover": { transform: "scale(1.02)" },
+          }}
+        >
           <Typography mt={1} variant="h6" fontWeight={600}>
             1342
           </Typography>
@@ -256,7 +271,12 @@ export default function ProfileBar() {
             borderColor: "gray",
           }}
         />
-        <Box sx={{ transition: "transform 0.3s ease", "&:hover": { transform: "scale(1.02)" } }}>
+        <Box
+          sx={{
+            transition: "transform 0.3s ease",
+            "&:hover": { transform: "scale(1.02)" },
+          }}
+        >
           <Typography mt={1} variant="h6" fontWeight={600}>
             3494
           </Typography>

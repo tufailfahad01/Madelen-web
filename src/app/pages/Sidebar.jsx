@@ -60,7 +60,8 @@ export default function Sidebar({ setActivePage }) {
               gap={2}
               sx={{
                 border: index === 0 ? "2px solid white" : "none",
-                backgroundColor: index === 0 ? "rgba(255, 255, 255, 0.1)" : "none",
+                backgroundColor:
+                  index === 0 ? "rgba(255, 255, 255, 0.1)" : "none",
                 borderRadius: "20px",
                 width: "max-content",
                 transition: "transform 0.3s ease, background-color 0.3s ease",
@@ -81,7 +82,12 @@ export default function Sidebar({ setActivePage }) {
         </Box>
       </Box>
 
-      <Box display="flex" flexDirection="column" justifyContent="flex-end" px={7}>
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent="flex-end"
+        px={7}
+      >
         {bottomItems.map((item, index) => (
           <Box
             key={index}
@@ -91,7 +97,7 @@ export default function Sidebar({ setActivePage }) {
             gap={2}
             sx={{
               transition: "transform 0.3s ease",
-              "&:hover": { transform: "scale(1.1)", cursor: "pointer"},
+              "&:hover": { transform: "scale(1.1)", cursor: "pointer" },
             }}
             onClick={() => setActivePage(item.page)}
           >

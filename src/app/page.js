@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
 import { Box } from "@mui/material";
-import Sidebar from "./components/Sidebar";
-import Dashboard from "./components/Dashboard";
-import Emporium from "./components/Emporium";
-import Library from "./components/Library";
-import Studio from "./components/Studio";
-import Ocoin from "./components/Ocoin";
-import ProfileBar from "./components/ProfileBar";
+import Sidebar from "./pages/Sidebar";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Emporium from "./pages/emporium/Emporium";
+import Library from "./pages/library/Library";
+import Studio from "./pages/studio/Studio";
+import Ocoin from "./pages/ocoin/Ocoin";
+import ProfileBar from "./pages/ProfileBar";
 import "./globals.css";
 
 export default function Home() {
@@ -47,8 +47,7 @@ export default function Home() {
     >
       <Sidebar setActivePage={setActivePage} />
 
-      <Box gridColumn="span 8"
-      width="100%" ml={"20%"} p={2}>
+      <Box gridColumn="span 8" width="100%" ml={"20%"} p={2}>
         <ActiveComponent />
       </Box>
 
