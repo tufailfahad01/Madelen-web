@@ -11,6 +11,7 @@ export default function ProfileBar() {
     <Box
       gridColumn="span 2"
       width={"100%"}
+      ml={30}
       p={2}
       sx={{
         animation: "fadeIn 0.5s ease-out",
@@ -20,21 +21,19 @@ export default function ProfileBar() {
         },
       }}
     >
-      {/* Top Row with Number Ring, Notification and Person icons */}
       <Box display={"flex"} gap={2} alignItems={"center"}>
         <Box
           sx={{
             display: "inline-flex",
             alignItems: "center",
             borderRadius: "50px",
-            p: "2px", // Controls the thickness of the gradient ring
+            p: "2px",
             background: "linear-gradient(to right, #D300C5, #FFC900)",
             position: "relative",
             transition: "transform 0.3s ease",
             "&:hover": { transform: "scale(1.05)" },
           }}
         >
-          {/* Inner Box: holds your content */}
           <Box
             sx={{
               display: "flex",
@@ -123,7 +122,6 @@ export default function ProfileBar() {
         </Box>
       </Box>
 
-      {/* Profile Avatar, Name and About */}
       <Box
         display={"flex"}
         mt={3}
@@ -178,7 +176,6 @@ export default function ProfileBar() {
         />
       </Box>
 
-      {/* Recent Activities */}
       <Box mt={2}>
         <Typography variant="h5" mt={1} fontWeight={600}>
           Recent activities
@@ -223,7 +220,6 @@ export default function ProfileBar() {
         }}
       />
 
-      {/* Statistics */}
       <Box mt={2}>
         <Typography mt={1} variant="h5" fontWeight={600}>
           Statistics
@@ -278,7 +274,6 @@ export default function ProfileBar() {
         />
       </Box>
 
-      {/* Discord Section */}
       <Box
         display={"flex"}
         mt={3}

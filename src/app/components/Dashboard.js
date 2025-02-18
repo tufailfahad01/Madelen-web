@@ -38,8 +38,6 @@ export default function Dashboard() {
 
   return (
     <Box
-    gridColumn="span 8"
-      width="100%"
       sx={{
         animation: "fadeIn 0.6s ease-out",
         "@keyframes fadeIn": {
