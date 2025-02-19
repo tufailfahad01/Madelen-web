@@ -5,6 +5,7 @@ import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
 import PersonIcon from "@mui/icons-material/Person";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import Divider from "@mui/material/Divider";
+import { CustomTypography } from "@/_components/common/Typography";
 
 export default function ProfileBar() {
   return (
@@ -130,47 +131,78 @@ export default function ProfileBar() {
         flexDirection={"column"}
       >
         <Box
-          sx={{
-            width: 180,
-            height: 180,
-            borderRadius: "50%",
-            p: "2px",
-            background: "linear-gradient(to right, #D300C5, #FFC900)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            transition: "transform 0.3s ease",
-            "&:hover": { transform: "scale(1.05)" },
-          }}
-        >
-          <Avatar
-            alt="User Image"
-            src="/assets/images/ProfileImage.png"
-            sx={{
-              width: 176,
-              height: 176,
-              borderRadius: "50%",
-            }}
+  sx={{
+    width: 180,
+    height: 180,
+    borderRadius: "50%",
+    background: "linear-gradient(to right, #D300C5, #FFC900)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "relative", // Added relative positioning
+    transition: "transform 0.3s ease",
+    "&:hover": { transform: "scale(1.05)" },
+  }}
+>
+  <Avatar
+    alt="User Image"
+    src="/assets/images/ProfileImage.png"
+    sx={{
+      width: 176,
+      height: 176,
+      borderRadius: "50%",
+    }}
+  />
+
+  <Box
+    sx={{
+      position: "absolute",
+      bottom: "10px",
+      right: "10px",
+      width: 30,
+      height: 30,
+      background: "black",
+      borderRadius: "50%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      boxShadow: "0 0 5px rgba(0,0,0,0.3)",
+    }}
+  >
+    <Image
+      src="/assets/icons/PictureIcon.png"
+      width={16}
+      height={16}
+      alt="Edit Name Icon"
+    />
+  </Box>
+</Box>
+
+        <Box display={"flex"} gap={1} alignItems={"center"}>
+          <CustomTypography
+            textSize="27px"
+            content="Madelen Sam"
+            textWeight={600}
+          />
+          <Image
+            src="/assets/icons/EditNameIcon.png"
+            width={16}
+            height={16}
+            alt="Edit Name Icon"
           />
         </Box>
-        <Box display={"flex"} gap={0.5} alignItems={"center"} mt={1}>
-          <Typography variant="h5" fontWeight={600}>
-            Madelen Sam
-          </Typography>
-          <EditNoteIcon
-            sx={{
-              transition: "transform 0.3s ease",
-              "&:hover": { transform: "scale(1.1)" },
-            }}
-          />
-        </Box>
-        <Typography variant="body1" color="gray">
-          @raymadelen
-        </Typography>
-        <Typography variant="body2" textAlign={"center"} color="gray">
-          Lorem odor amet, consec tetuer adipi scing elit ctus effi citur cura
-          erdiet ntum senectus odio.
-        </Typography>
+        <CustomTypography
+          textSize="14px"
+          content="@raymadelen"
+          textColor="gray"
+        />
+        <CustomTypography
+          textSize="14px"
+          content="Lorem odor amet, consec tetuer adipi scing elit ctus effi citur cura
+          erdiet ntum senectus odio."
+          textColor="gray"
+          align="center"
+        />
         <Divider
           sx={{
             width: "100%",
@@ -181,10 +213,12 @@ export default function ProfileBar() {
         />
       </Box>
 
-      <Box mt={2}>
-        <Typography variant="h5" mt={1} fontWeight={600}>
-          Recent activities
-        </Typography>
+      <Box mt={1}>
+        <CustomTypography
+          textSize="18px"
+          content="Recent Activities"
+          textWeight={600}
+        />
         {[
           "Downloaded new mesh 1",
           "Downloaded new mesh 2",
@@ -194,23 +228,22 @@ export default function ProfileBar() {
           <Box
             key={id}
             display={"flex"}
-            py={0.3}
+            py={0.2}
             alignItems={"center"}
             gap={1}
             sx={{
               transition: "background-color 0.3s ease",
               "&:hover": { backgroundColor: "#111" },
               borderRadius: "4px",
-              px: 1,
             }}
           >
             <Image
               src="/assets/icons/ListTypeImage.png"
-              width={14}
-              height={14}
+              width={12}
+              height={12}
               alt="List Icon"
             />
-            <Typography variant={"body1"} py={0.3} color="gray">
+            <Typography sx={{ fontSize: "14px" }} color="gray">
               {activity}
             </Typography>
           </Box>
@@ -225,22 +258,25 @@ export default function ProfileBar() {
         }}
       />
 
-      <Box mt={2}>
-        <Typography mt={1} variant="h5" fontWeight={600}>
-          Statistics
-        </Typography>
+      <Box mt={1}>
+        <CustomTypography
+          textSize="18px"
+          content="Statistics"
+          textWeight={600}
+        />
         <Box
           sx={{
             transition: "transform 0.3s ease",
             "&:hover": { transform: "scale(1.02)" },
           }}
         >
-          <Typography variant="h6" fontWeight={600}>
-            234
-          </Typography>
-          <Typography variant="body2" fontWeight={600} color="gray">
-            TOTAL REMIXES
-          </Typography>
+          <CustomTypography textSize="26px" content="234" textWeight={600} />
+          <CustomTypography
+            textSize="12px"
+            content="TOTAL REMIXES"
+            textWeight={600}
+            textColor="gray"
+          />
         </Box>
         <Divider
           sx={{
@@ -251,17 +287,19 @@ export default function ProfileBar() {
           }}
         />
         <Box
+          mt={1}
           sx={{
             transition: "transform 0.3s ease",
             "&:hover": { transform: "scale(1.02)" },
           }}
         >
-          <Typography mt={1} variant="h6" fontWeight={600}>
-            1342
-          </Typography>
-          <Typography variant="body2" fontWeight={600} color="gray">
-            TOTAL DOWNLOADS
-          </Typography>
+          <CustomTypography textSize="26px" content="1342" textWeight={600} />
+          <CustomTypography
+            textSize="12px"
+            content="TOTAL DOWNLOADS"
+            textWeight={600}
+            textColor="gray"
+          />
         </Box>
         <Divider
           sx={{
@@ -272,17 +310,19 @@ export default function ProfileBar() {
           }}
         />
         <Box
+          mt={1}
           sx={{
             transition: "transform 0.3s ease",
             "&:hover": { transform: "scale(1.02)" },
           }}
         >
-          <Typography mt={1} variant="h6" fontWeight={600}>
-            3494
-          </Typography>
-          <Typography variant="body2" fontWeight={600} color="gray">
-            TOTAL PROJECTS
-          </Typography>
+          <CustomTypography textSize="26px" content="3494" textWeight={600} />
+          <CustomTypography
+            textSize="12px"
+            content="TOTAL PROJECTS"
+            textWeight={600}
+            textColor="gray"
+          />
         </Box>
         <Divider
           sx={{
@@ -296,9 +336,9 @@ export default function ProfileBar() {
 
       <Box
         display={"flex"}
-        mt={3}
+        mt={2}
         flexDirection={"column"}
-        gap={1}
+        gap={0.8}
         alignItems={"center"}
         sx={{
           transition: "transform 0.3s ease",
@@ -307,22 +347,29 @@ export default function ProfileBar() {
       >
         <Image
           src="/assets/images/discordImage.png"
-          width={54}
-          height={54}
+          width={52}
+          height={53}
           alt="Discord Icon"
         />
-        <Typography variant={"h6"} fontWeight={600}>
-          Join Us On Discord!
-        </Typography>
-        <Typography variant={"body2"} textAlign={"center"} color="gray">
-          Connect with fellow creators, stay in touch with the team, and get the
-          latest updates and news from OOR!
-        </Typography>
+        <CustomTypography
+          textSize="18px"
+          content="Join Us On Discord!"
+          textWeight={600}
+        />
+        <CustomTypography
+          textSize="12px"
+          content="Connect with fellow creators, stay in touch with the team, and get the
+          latest updates and news from O!"
+          textWeight={600}
+          textColor="gray"
+          align="center"
+        />
         <Button
           sx={{
+            mt: 1,
             backgroundColor: "#FF0101",
             color: "#fff",
-            borderRadius: "20px",
+            borderRadius: "30px",
             width: "100%",
             boxShadow: "0px 4px 10px #FF0101",
             textTransform: "none",

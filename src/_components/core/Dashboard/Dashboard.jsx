@@ -1,14 +1,13 @@
 "use client";
 import Image from "next/image";
 import { Box, Typography } from "@mui/material";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import WhatshotIcon from "@mui/icons-material/Whatshot";
 import CustomTextField from "@/_components/common/TextField";
-
-import { imagesData, navItems, bottomItems } from "@/utils/dashboardData";
+import { imagesData } from "@/utils/dashboardData";
 import { useState } from "react";
 import { CardComponent } from "@/_components/common/Card/Index";
 import { ImageCarousel } from "@/_components/common/ImageCarousel/Index";
+import { CustomTypography } from "@/_components/common/Typography";
+
 export default function Dashboard() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -23,16 +22,24 @@ export default function Dashboard() {
       }}
     >
       <CustomTextField placeholder="Search anything..." />
-      <Typography p={2} fontWeight={700} variant="h4">
+      <Typography
+        p={2}
+        fontWeight={600}
+        sx={{
+          fontFamily: "Inter, serif",
+          fontSize: "40px",
+          lineHeight: "49px",
+        }}
+      >
         Welcome Back, Madelen
       </Typography>
       <Box
         sx={{
           backgroundImage: `url("/assets/images/EmporiumBox.png")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
-          height: "30vh",
+          height: "285px",
+          width: "100%",
           borderRadius: "30px",
           display: "flex",
           alignItems: "flex-end",
@@ -41,40 +48,56 @@ export default function Dashboard() {
           "&:hover": { transform: "scale(1.02)" },
         }}
       >
-        <Box px={2} sx={{ width: "100%" }}>
-          <Typography variant="h3" fontWeight={700} pb={1}>
+        <Box sx={{ width: "100%" }}>
+          <Typography
+            fontWeight={700}
+            sx={{
+              fontSize: "48px",
+              fontFamily: "Inter, serif",
+              lineHeight: "50px",
+            }}
+          >
             Your Next Creation Starts Here
           </Typography>
           <Box
             display="flex"
             justifyContent="space-between"
             alignItems="center"
+            mb={3}
           >
             <Box>
-              <Typography variant="body1" color="gray">
-                Browse & Remix a Vast Collection of Editable, Game-Ready Meshes.
-              </Typography>
-              <Typography variant="body1" color="gray">
-                With Remix AI, transform any asset—no skills needed.
-              </Typography>
+              <CustomTypography
+                textSize="18px"
+                content="Browse & Remix a Vast Collection of Editable, Game-Ready Meshes."
+                textHeight="28px"
+                textColor="rgb(209, 205, 205)"
+                textfamily="Inter, serif"
+              />
+              <CustomTypography
+                textSize="18px"
+                content="With Remix AI, transform any asset—no skills needed."
+                textHeight="28px"
+                textColor="rgb(209, 205, 205)"
+                textfamily="Inter, serif"
+              />
             </Box>
             <Image
               src="/assets/icons/GOIcon.png"
-              width={70}
-              height={70}
+              width={89}
+              height={83}
               alt="Go Icon"
             />
           </Box>
         </Box>
       </Box>
-      <Box mt={3} gap={2} display="flex" flexDirection="row" width="100%">
+      <Box gap={2} display="flex" flexDirection="row">
         <CardComponent
           icon={
-            <EmojiEventsIcon
-              sx={{
-                transition: "transform 0.3s",
-                "&:hover": { transform: "rotate(10deg)" },
-              }}
+            <Image
+              src="/assets/icons/Group 395.png"
+              width={14.67}
+              height={14.67}
+              alt="Library Icon"
             />
           }
           title="CURRENT PLAN"
@@ -86,9 +109,9 @@ export default function Dashboard() {
         <CardComponent
           icon={
             <Image
-              src="/assets/icons/library.png"
-              width={22}
-              height={22}
+              src="/assets/icons/OpenedFolder(1).png"
+              width={16}
+              height={16}
               alt="Library Icon"
             />
           }
@@ -100,11 +123,11 @@ export default function Dashboard() {
         />
         <CardComponent
           icon={
-            <WhatshotIcon
-              sx={{
-                transition: "transform 0.3s",
-                "&:hover": { transform: "rotate(-10deg)" },
-              }}
+            <Image
+              src="/assets/icons/Vector.png"
+              width={12}
+              height={14}
+              alt="Go Icon"
             />
           }
           title="TRENDING MESHES"
@@ -112,9 +135,14 @@ export default function Dashboard() {
           buttonText="Discover"
           imageSrc="/assets/icons/Sun.png"
           altText="Sun Icon"
+          btnFontSize="18px"
         />
       </Box>
-      <Typography p={2} fontWeight={700} variant="h5">
+      <Typography
+        mt={4}
+        fontWeight={700}
+        sx={{ fontSize: "30px", fontFamily: "Inter, serif" }}
+      >
         Get Started – Quick Actions
       </Typography>
       <ImageCarousel

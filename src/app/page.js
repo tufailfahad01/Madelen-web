@@ -47,7 +47,7 @@ export default function Home() {
     >
       <Sidebar setActivePage={setActivePage} />
 
-      <Box gridColumn="span 8" width="100%" ml={"20%"} p={2}>
+      <Box gridColumn="span 8" width="95%" ml={"25%"} p={2}>
         <ActiveComponent />
       </Box>
 
