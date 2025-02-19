@@ -11,7 +11,7 @@ export const CardComponent = ({ icon, title, content, buttonText, imageSrc, altT
       boxShadow: "0px 4px 10px rgba(255, 255, 255, 0.1)",
       transition: "transform 0.3s ease",
       "&:hover": { transform: "scale(1.02)" },
-      width: { xs: "100%", sm: "300px", md: "310px" },
+      width: { xs: "100%", sm: "260px", md: "280px" },
       mb: { xs: 2, sm: 0 },
     }}
   >
@@ -26,7 +26,7 @@ export const CardComponent = ({ icon, title, content, buttonText, imageSrc, altT
       }}
     >
       {icon}
-      <Typography fontWeight={600} sx={{fontSize: "12px", fontFamily: "sans-serif", lineHeight: "14px"}}>
+      <Typography fontWeight={600} sx={{fontSize: "10px", fontFamily: "sans-serif", lineHeight: "14px"}}>
         {title}
       </Typography>
     </Box>
@@ -42,12 +42,12 @@ export const CardComponent = ({ icon, title, content, buttonText, imageSrc, altT
     >
       <Image
         src={imageSrc}
-        width={55}
-        height={55}
+        width={45}
+        height={45}
         alt={altText}
         style={{ transition: "transform 0.3s", cursor: "pointer" }}
       />
-      <Typography fontWeight={600} sx={{ textAlign: { xs: "center", sm: "left" }, fontSize: "24px", lineHeight: "29px" }}>
+      <Typography fontWeight={600} sx={{ textAlign: { xs: "center", sm: "left" }, fontSize: "20px", lineHeight: "29px" }}>
         {content}
       </Typography>
       <CustomButton text={buttonText} />

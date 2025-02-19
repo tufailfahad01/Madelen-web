@@ -36,7 +36,7 @@ export default function Dashboard() {
       <Box
         sx={{
           backgroundImage: `url("/assets/images/EmporiumBox.png")`,
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           height: "285px",
           width: "100%",
@@ -90,7 +90,7 @@ export default function Dashboard() {
           </Box>
         </Box>
       </Box>
-      <Box gap={2} display="flex" flexDirection="row">
+      <Box gap={2} mt={4} display="flex" flexDirection="row">
         <CardComponent
           icon={
             <Image
