@@ -11,7 +11,7 @@ export const CardComponent = ({ icon, title, content, buttonText, imageSrc, altT
       boxShadow: "0px 4px 10px rgba(255, 255, 255, 0.1)",
       transition: "transform 0.3s ease",
       "&:hover": { transform: "scale(1.02)" },
-      width: { xs: "100%", sm: "300px", md: "320px" },
+      width: { xs: "100%", sm: "300px", md: "310px" },
       mb: { xs: 2, sm: 0 },
     }}
   >

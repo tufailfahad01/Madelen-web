@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Box, Typography, Button, Avatar } from "@mui/material";
 import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
 import PersonIcon from "@mui/icons-material/Person";
-import EditNoteIcon from "@mui/icons-material/EditNote";
 import Divider from "@mui/material/Divider";
 import { CustomTypography } from "@/_components/common/Typography";
 
@@ -131,52 +130,43 @@ export default function ProfileBar() {
         flexDirection={"column"}
       >
         <Box
-  sx={{
-    width: 180,
-    height: 180,
-    borderRadius: "50%",
-    background: "linear-gradient(to right, #D300C5, #FFC900)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative", // Added relative positioning
-    transition: "transform 0.3s ease",
-    "&:hover": { transform: "scale(1.05)" },
-  }}
->
-  <Avatar
-    alt="User Image"
-    src="/assets/images/ProfileImage.png"
-    sx={{
-      width: 176,
-      height: 176,
-      borderRadius: "50%",
-    }}
-  />
-
-  <Box
-    sx={{
-      position: "absolute",
-      bottom: "10px",
-      right: "10px",
-      width: 30,
-      height: 30,
-      background: "black",
-      borderRadius: "50%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      boxShadow: "0 0 5px rgba(0,0,0,0.3)",
-    }}
-  >
-    <Image
-      src="/assets/icons/PictureIcon.png"
-      width={16}
-      height={16}
-      alt="Edit Name Icon"
-    />
-  </Box>
-</Box>
+          sx={{
+            position: "relative",
+            width: 196,
+            height: 196,
+          }}
+        >
+          <Avatar
+            alt="User Image"
+            src="/assets/images/Profile.png"
+            sx={{
+              width: "100%",
+              height: "100%",
+            }}
+          />
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: 20,
+              right: 26,
+              width: 35,
+              height: 35,
+              background: "rgba(17, 17, 17, 0.6)",
+              borderRadius: "50%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              boxShadow: "0 0 5px rgba(0,0,0,0.1)",
+            }}
+          >
+            <Image
+              src="/assets/icons/PictureIcon.png"
+              width={18}
+              height={18}
+              alt="Edit Name Icon"
+            />
+          </Box>
+        </Box>
 
         <Box display={"flex"} gap={1} alignItems={"center"}>
           <CustomTypography
